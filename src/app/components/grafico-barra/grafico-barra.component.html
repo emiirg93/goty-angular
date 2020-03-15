@@ -1,0 +1,16 @@
+<div class="chart-container">
+    <ngx-charts-bar-horizontal
+        [scheme]="colorScheme"
+        [results]="result"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        (select)="onSelect($event)"
+        style="fill: rgb(187, 185, 185);">
+    </ngx-charts-bar-horizontal>
+</div>
