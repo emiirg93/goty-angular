@@ -1,18 +1,29 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-          <img src="../../../assets/img/goty-icon.png" width="30" height="30" class="d-inline-block align-top" alt="Goty icon">
-          GOTY
-        </a>
-    </nav>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="home">Inicio</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="goty">Votar</a>
-        </li>
-      </ul>
+<div class="d-none d-sm-none d-md-block">
+  <div class="nav d-flex justify-content-between mt-3">
+    <div class="img">
+      <a routerLink="home"><img src="assets/img/goty-icon.png" width="120" height="100"alt=""></a>
     </div>
-</nav>
+    <div class="d-flex justify-content-end flex-wrap align-content-center">
+      <div class="item-link mr-3" routerLinkActive="active">
+        <a routerLink="home">Home</a>
+      </div>
+      <div class="item-link" routerLinkActive="active">
+        <a routerLink="goty">Votar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-block d-sm-block d-md-none text-center">
+  <div class="img mt-3">
+    <a routerLink="home"><img src="assets/img/goty-icon.png" width="120" height="100"alt=""></a>
+  </div>
+  <div class="d-flex justify-content-around mt-3">
+    <div class="ml-5" routerLinkActive="active">
+      <a routerLink="home">Home</a>
+    </div>
+    <div class="mr-5" routerLinkActive="active">
+      <a routerLink="goty">Votar</a>
+    </div>
+  </div>
+</div>

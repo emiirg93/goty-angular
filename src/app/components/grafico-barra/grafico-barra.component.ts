@@ -1,29 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grafico-barra',
   templateUrl: './grafico-barra.component.html',
   styleUrls: ['./grafico-barra.component.css']
 })
-export class GraficoBarraComponent  {
-  result: any[]=[
-    {
-      "name": "Juego 1",
-      "value": 8940000
-    },
-    {
-      "name": "Juego 2",
-      "value": 5000000
-    },
-    {
-      "name": "Juego 3",
-      "value": 7200000
-    },
-    {
-      "name": "Juego 4",
-      "value": 7200000
-    }
-  ];
+export class GraficoBarraComponent implements OnDestroy {
+
+  @Input() result: any[]=[];
 
   // options
   showXAxis = true;
@@ -34,11 +18,32 @@ export class GraficoBarraComponent  {
   xAxisLabel = 'Juegos';
   showYAxisLabel = true;
   yAxisLabel = 'Votos';
+  
+  colorScheme = 'aqua';
 
-  colorScheme = 'aqua'
+  intervalo;
+
+  constructor(){
+    // this.intervalo = setInterval(()=>{
+    //   console.log('tick');
+
+    //   const newResult = [...this.result];
+
+    //   for (let i in newResult) {
+    //     newResult[i].value = Math.round(Math.random()*500)
+    //   }
+
+    //   this.result = [...newResult];
+
+    // },1500)
+  }
 
   onSelect(event) {
     console.log(event);
+  }
+
+  ngOnDestroy(){
+    // clearInterval(this.intervalo);
   }
 
 }

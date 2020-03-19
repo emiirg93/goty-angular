@@ -8,11 +8,12 @@ import { NavbarComponent } from "./navbar/navbar.component";
 import { GraficoBarraComponent } from "./grafico-barra/grafico-barra.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
-  declarations: [NavbarComponent, GraficoBarraComponent],
-  exports: [NavbarComponent,GraficoBarraComponent],
+  declarations: [NavbarComponent, GraficoBarraComponent, FooterComponent],
+  exports: [NavbarComponent,GraficoBarraComponent,FooterComponent],
   imports: [CommonModule, RouterModule,NgxChartsModule,BrowserAnimationsModule,BrowserModule,FormsModule]
 })
 export class ComponentsModule {}

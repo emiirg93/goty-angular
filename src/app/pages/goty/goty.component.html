@@ -1,1 +1,29 @@
-<p>goty works!</p>
+<hr>
+
+<div class="container animated fadeIn mb-5">
+    <div class="text-center">
+      <h4 class=" mb-4">Vota Por El Juego Del Año</h4>
+    </div>
+    <div class="spinner-container text-center" [hidden]="juegos.length > 0">
+      <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <p>Loading...</p>
+    </div>
+    <div class="row animated fadeInUp" [hidden]="juegos.length == 0">
+        <div class="col-sm col-3-lg"*ngFor="let juego of juegos">
+            <div class="card-group">
+                <div class="card bg-dark">
+                  <img [src]="juego.url" class="card-img-top" [alt]="juego.name">
+                  <div class="card-body text-center">
+                    <h5 class="card-title" >{{juego.name}}</h5>
+                    <button class="btn btn-secondary btn-block" (click)="votar(juego)">Vota</button>
+                  </div>
+                  <div class="card-footer text-center">
+                    <small class="text-white">Votos hasta el momento : <span class="text-warning">{{juego.votos}}</span></small>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
